@@ -5,9 +5,10 @@
 	<!-- I used h1-6 provide structure and hierarchy to the web page -->
 	<!-- TBH I did some research on how to make a decent look, I did used the color hexes, pixel radius like borders -->
 	<!-- I used some color hexes to make them least appropriate to look -->
+	<!-- I also added a option menu or a dropdown so they can select their haus -->
   <!-- did research for buttons-->
   <!-- I asked for help also -->
-  <!-- I added a clock html -->
+  <!-- I added a clock html lol -->
 	<meta charset="UTF-8">
 	<title>The Haus | Welcome to our Discord community</title>
 	<link rel="stylesheet" href="style.css">
@@ -80,25 +81,6 @@
     margin-bottom: 20px;
 		}
 
-		.btn {
-			background-color: white;
-			color: black;
-			padding: 20px;
-			border: none;
-			border-radius: 10px;
-			font-size: 24px;
-			font-weight: bold;
-			cursor: pointer;
-			transition: background-color 0.3s ease;
-			margin: 20px;
-			text-decoration: none;
-			display: inline-block;
-		}
-
-		.btn:hover {
-			background-color: rgba(255, 255, 255, 0.9);
-		}
-
 		section {
 			margin: 100px 0;
 		}
@@ -110,6 +92,63 @@
 		section:last-child {
 			margin-bottom: 0;
 		}
+    
+    form {
+  width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="gender"],
+input[type="bday"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+    
 	</style>
 </head>
 <body>
@@ -128,14 +167,11 @@
 		<section id="home">
 			<h1>Welcome to The Haus</h1>
 			<p>Join our Discord community and connect with like-minded individuals. Our Hausmates are friendly and fun, and we're always looking to welcome 
-
 new members. Come hang out with us and see what The Haus is all about!</p>
-			<a href="#join" class="btn">Join Now</a>
 		</section>
 		<section id="hauses">
 			<h2>Our Hauses</h2>
 			<p>Check out our community's Hauses and see what each of them is all about.</p>
-			<a href="Hauses.html" class=""btn">Explore Hauses</a>
 </section>
 <section id="events">
 <h2>Upcoming Events</h2>
@@ -143,9 +179,35 @@ new members. Come hang out with us and see what The Haus is all about!</p>
 </section>
 <section id="about">
 <h2>About Us</h2>
-<p>The Haus is a Discord community that was founded in 2020. Our goal is to create a welcoming and inclusive space where people can connect and have fun. We're always 
+<p>The Haus is a Discord community that was founded in 2021. Our goal is to create a welcoming and inclusive space where people can connect and have fun. We're always 
 
 looking for new members, so come join us!</p>
+                   <form>
+  <h3>Join The Haus Community</h3>
+  <label for="name">Discord ID:</label>
+  <input type="text" id="name" name="DiscordID" required>
+  <label for="gender">Gender:</label>
+  <input type="gender" id="gender" name="gender" required>
+  
+  <label for="bday">Birthday:</label>
+  <input type="text" id="bday" name="bday" required>
+  
+  <label for="referer">How did you find about us?</label>
+  <input type="text" id="referer" name="referer" required>
+  
+ <p><label for="haus">Which Haus are you interested in joining?</label>
+<select id="haus" name="haus" required>
+	<option value="">Select Haus</option>
+	<option value="Haus of Balance">Haus of Balance</option>
+	<option value="Haus of Brilliance">Haus of Brilliance</option>
+	<option value="Haus of Bravery">Haus of Bravery</option>
+</select></p>
+  
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" placeholder="Tell us about yourself..."></textarea>
+  
+  <button type="submit" class="btn">Join Now</button>
+</form>
 </section>
 </main>
 
