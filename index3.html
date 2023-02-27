@@ -8,7 +8,7 @@
 	<!-- I also added a option menu or a dropdown so they can select their haus -->
   <!-- did research for buttons-->
   <!-- I asked for help also -->
-  <!-- I added a clock html lol -->
+  <!-- I added a clock script which I found online lol -->
 	<meta charset="UTF-8">
 	<title>The Haus | Welcome to our Discord community</title>
 	<link rel="stylesheet" href="style.css">
@@ -177,31 +177,30 @@ new members. Come hang out with us and see what The Haus is all about!</p>
 <h2>Upcoming Events</h2>
 <p>Coming soon!</p>
 </section>
+		
 <section id="about">
 <h2>About Us</h2>
-<p>The Haus is a Discord community that was founded in 2021. Our goal is to create a welcoming and inclusive space where people can connect and have fun. We're always 
-
-looking for new members, so come join us!</p>
-                   <form>
-  <h3>Join The Haus Community</h3>
-  <label for="name">Discord ID:</label>
-  <input type="text" id="name" name="DiscordID" required>
+<p>The Haus is a Discord community that was founded in 2021. Our goal is to create a welcoming and inclusive space where people can connect and have fun. We're always looking for new members, so come join us!</p>
+  <form><h3>Join The Haus Community</h3>
+  <form action="submit-form.php" method="POST">
+  <label for="discord-id">Discord ID:</label>
+  <input type="text" id="discord-id" name="discord-id" required>
   <label for="gender">Gender:</label>
-  <input type="gender" id="gender" name="gender" required>
-  
-  <label for="bday">Birthday:</label>
-  <input type="text" id="bday" name="bday" required>
-  
-  <label for="referer">How did you find about us?</label>
-  <input type="text" id="referer" name="referer" required>
-  
- <p><label for="haus">Which Haus are you interested in joining?</label>
-<select id="haus" name="haus" required>
-	<option value="">Select Haus</option>
-	<option value="Haus of Balance">Haus of Balance</option>
-	<option value="Haus of Brilliance">Haus of Brilliance</option>
-	<option value="Haus of Bravery">Haus of Bravery</option>
-</select></p>
+  <input type="text" id="gender" name="gender" required>
+
+  <p><label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday" required></p>
+
+  <label for="find-us">How did you find out about us?</label>
+  <input type="text" id="find-us" name="find-us" required>
+
+  <p><label for="haus">Which haus are you interested in joining?</label>
+  <select id="haus" name="haus">
+    <option value="">Select Haus</option>
+    <option value="haus-of-balance">Haus of Balance</option>
+    <option value="haus-of-brilliance">Haus of Brilliance</option>
+    <option value="haus-of-bravery">Haus of Bravery</option>
+    </select></p>
   
   <label for="message">Message:</label>
   <textarea id="message" name="message" placeholder="Tell us about yourself..."></textarea>
