@@ -15,6 +15,20 @@
   border-radius: 30px;
   
 }
+.popup p1 {
+  color: #000;
+  display: flex;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(211, 193, 202, .2);
+  text-shadow: 2px 2px 4px #000;
+  border-radius: 10px;
+  
+}
+
 .popup{
   width: 400px;
   background: #fff;
