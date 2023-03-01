@@ -181,8 +181,9 @@ new members. Come hang out with us and see what The Haus is all about!</p>
 <section id="about">
 <h2>About Us</h2>
 <p>The Haus is a Discord community that was founded in 2021. Our goal is to create a welcoming and inclusive space where people can connect and have fun. We're always looking for new members, so come join us!</p>
-  <form id="my-form" action="https://formspree.io/f/xbjeydyo" method="post">
+  <form id="hausmate-form" action="https://formspree.io/f/xbjeydyo" method="post"> 
   <h3>Join The Haus Community</h3>
+  <!-- form fields -->
   <label for="discord-id">Discord ID:</label>
   <input type="text" id="discord-id" name="discord-id" placeholder="example#1234" required>
   <label for="gender">Gender:</label>
@@ -192,7 +193,7 @@ new members. Come hang out with us and see what The Haus is all about!</p>
   <input type="date" id="birthday" name="birthday" required></p>
 
   <label for="find-us">How did you find out about us?</label>
-  <input type="text" id="find-us" name="find-us" placeholder="Friends, Friends of Friends, his/her name, etc..." required>
+  <input type="text" id="find-us" name="find-us" placeholder="Friends, Friends of Friends, or his/her name, etc..." required>
 
   <p><label for="haus">Which haus are you interested in joining?</label>
   <select id="haus" name="haus" required>
@@ -204,11 +205,39 @@ new members. Come hang out with us and see what The Haus is all about!</p>
   
   <label for="message">Message:</label>
   <textarea id="message" name="message" placeholder="Tell us about yourself..."></textarea>
-  <button type="submit" class="btn">Join Now</button>
+  <button type="submit" class="btn" onclick="submitForm(event)">Join Now!</button>
 </form>
+
+<div class="container">
+  <div class="popup" id="popup">
+    <img src="https://www.linkpicture.com/q/404-tick_3.png">
+    <h2>Thank You!</h2>
+    <p>Your details have been successfully submitted. Thanks!</p>
+    <button type="button" onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<script>
+  let popup = document.getElementById("popup"); // get the popup element
+  function openPopup() {
+    popup.classList.add("open-popup"); // add the "open-popup" class to show the popup
+  }
+  function closePopup() {
+    popup.classList.remove("open-popup"); // remove the "open-popup" class to hide the popup
+  }
+  function submitForm(event) {
+    event.preventDefault(); // prevent the default form submission
+    let form = document.getElementById("hausmate-form");
+    if (form.checkValidity()) { // check if all required fields are filled
+      openPopup(); // show the popup message
+      form.reset(); // clear the form inputs
+    }
+  }
+</script>
+
 </section>
 </main>
 </body>
 </html>
             
-<div style="text-align:center;padding:1em 0;"> <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/country/ph"><span style="color:black;">Current local time in</span><br />Philippines</a></h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Asia%2FManila" width="100%" height="115" frameborder="0" seamless></iframe> </div>
+
