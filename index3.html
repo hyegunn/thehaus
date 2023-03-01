@@ -226,13 +226,27 @@ new members. Come hang out with us and see what The Haus is all about!</p>
     popup.classList.remove("open-popup"); // remove the "open-popup" class to hide the popup
   }
   function submitForm(event) {
-    event.preventDefault(); // prevent the default form submission
-    let form = document.getElementById("hausmate-form");
-    if (form.checkValidity()) { // check if all required fields are filled
-      openPopup(); // show the popup message
-      form.reset(); // clear the form inputs
-    }
+  event.preventDefault(); // prevent the default form submission
+  let form = document.getElementById("hausmate-form");
+  if (form.checkValidity()) { // check if all required fields are filled
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          // Success message
+          openPopup();
+          form.reset();
+        } else {
+          // Error message
+          alert("Oops! Something went wrong. Please try again later.");
+        }
+      }
+    };
+    xhr.send(new FormData(form));
   }
+}
 </script>
 
 </section>
