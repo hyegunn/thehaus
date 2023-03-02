@@ -4,6 +4,26 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+.container {
+  width: 16vw;
+  height: 9vw;
+}
+
+p3 {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    font-size: 28px;
+    border-radius: 10px;
+    line-height: 1.5;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .9);
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+}
+
 .btn {
   padding: 10px 60px;
   background: #fff;
