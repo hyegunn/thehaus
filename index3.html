@@ -13,6 +13,7 @@
 	<title>The Haus | Welcome to our Discord community</title>
 	<link rel="stylesheet" href="style.index.css">
 	<link rel="icon" type="image/png" href="https://www.linkpicture.com/q/webpage-logo.png">
+  <script src="myscript.js"></script>
 	<style>
 		body {
 			background-image: url("https://www.linkpicture.com/q/haus-bg.png");
@@ -218,16 +219,15 @@ new members. Come hang out with us and see what The Haus is all about!</p3>
   <textarea id="message" name="message" placeholder="Tell us about yourself..."></textarea>
   <button type="submit" class="btn" onclick="submitForm(event)">Join Now!</button>
 </form>
-
-<div class="container">
-  <div class="popup" id="popup">
-    <img src="https://www.linkpicture.com/q/404-tick_3.png">
-    <h2>Thank You!</h2>
-    <p1>Your details have been successfully submitted. Thanks!</p1>
-    <button type="button" onclick="closePopup()">OK</button>
+  <div class="overlay">
+  <div class="popup2">
+    <h2>Are you 18 years old or above?</h2>
+    <button id="yes-btn">Yes</button>
+    <button id="no-btn">No</button>
   </div>
 </div>
 
+<div class="background"></div>
 <script>
   let popup = document.getElementById("popup"); // get the popup element
   function openPopup() {
@@ -264,5 +264,4 @@ new members. Come hang out with us and see what The Haus is all about!</p3>
 </main>
 </body>
 </html>
-            
-
+           
