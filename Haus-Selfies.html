@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <header><nav>
+			<ul>
+				<li><a href="index3.html">Home</a></li>
+				<li><a href="Hauses.html">Hauses</a></li>
+        <li><a href="Haus-Selfies.html">Selfies</a></li>
+				<li><a href="#events">Events</a></li>
+				<li><a href="about.html">About Us</a></li>
+			</ul>
+    </nav></header>
+	<title>Send a Selfie with Caption</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Snap Your Style: Share Your Selfie with the World!</h1>
+		<p>Strike a Pose and Share Your Story: Upload Your Selfie. We'll review it and add it to our gallery if it meets our guidelines.</p>
+		<form action="https://formspree.io/f/xzbqgkvv" method="POST" enctype="multipart/form-data">
+			<label for="selfie">Selfie:</label>
+			<input type="file" id="selfie" name="selfie" accept="image/*" required>
+			<label for="caption">Caption:</label>
+			<input type="text" id="caption" name="caption" placeholder="Optional">
+			<button type="submit">Submit</button>
+		</form>
+    <div class="gallery">
+  <h2>Snapshot Showcase</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://pbs.twimg.com/media/FRopOipWUAE_kR1.jpg:large" alt="Selfie">
+      <p>Hey @hausmates!</p>
+    </div>
+    <div class="gallery-item">
+      <img src="https://w0.peakpx.com/wallpaper/290/725/HD-wallpaper-cha-eun-woo-astro-kpop.jpg" alt="Selfie">
+      <p>Welcome to 'The Haus'</p>
+    </div>
+    <!-- Add more gallery items as needed -->
+  </div>
+</div>
+	</div>
+</body>
+</html>
